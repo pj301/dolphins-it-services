@@ -29,6 +29,412 @@
     <!-- Template Stylesheet -->
     <link href="public/css/style.css" rel="stylesheet">
     <link href="public/css/custom.css" rel="stylesheet">
+
+    <style>
+        .header-carousel .owl-nav .owl-prev,
+        .header-carousel .owl-nav .owl-next {
+            display: none !important;
+            background: #0058e7 !important;
+        }
+        /* Clients Section Styles */
+        .clients-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        /* Clients Carousel - FULL WIDTH WITH SIMPLE TEXT BORDERS */
+        .clients-carousel-wrapper {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 0;
+            padding: 60px 0;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: none;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            position: relative;
+            overflow: hidden;
+        }
+
+            /* Top Text Border */
+            .clients-carousel-wrapper::before {
+                content: 'Our Trusted Partners • Our Trusted Partners • Our Trusted Partners • Our Trusted Partners • Our Trusted Partners • Our Trusted Partners • Our Trusted Partners • Our Trusted Partners • Our Trusted Partners • Our Trusted Partners • ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 30px;
+                background: linear-gradient(90deg, #0058e7 0%, #2d7dd2 50%, #0058e7 100%);
+                color: white;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                z-index: 10;
+                animation: textScrollLeft 25s linear infinite;
+                text-transform: uppercase;
+            }
+
+            /* Bottom Text Border */
+            .clients-carousel-wrapper::after {
+                content: '• Trusted Partners • Trusted Partners • Trusted Partners • Trusted Partners • Trusted Partners • Trusted Partners • Trusted Partners • Trusted Partners • Trusted Partners • Trusted Partners • Trusted Partners';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 30px;
+                background: linear-gradient(90deg, #28a745 0%, #20c997 50%, #28a745 100%);
+                color: white;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                z-index: 10;
+                animation: textScrollRight 20s linear infinite;
+                text-transform: uppercase;
+            }
+
+        @keyframes textScrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes textScrollRight {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Alternative simpler static version */
+        .clients-carousel-wrapper.static-borders::before {
+            content: '• • • Our Trusted Partners • • • Our Trusted Partners • • • Our Trusted Partners • • • Our Trusted Partners • • • Our Trusted Partners • • •';
+            animation: none;
+            background: #0058e7;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .clients-carousel-wrapper.static-borders::after {
+            content: '• • • Trusted Partners • • • Trusted Partners • • • Trusted Partners • • • Trusted Partners • • • Trusted Partners • • • Trusted Partners • • •';
+            animation: none;
+            background: #28a745;
+            text-align: center;
+            justify-content: center;
+        }
+
+        /* Pause text animation on hover */
+        .clients-carousel-wrapper:hover::before,
+        .clients-carousel-wrapper:hover::after {
+            animation-play-state: paused;
+        }
+
+        .clients-carousel {
+            animation: scroll-left 8s linear infinite;
+            white-space: nowrap;
+            will-change: transform;
+            display: flex;
+            align-items: center;
+        }
+
+            .clients-carousel:hover {
+                animation-play-state: paused;
+            }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-33.333%);
+            }
+        }
+
+        .client-logo-item {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 60px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            min-width: 200px;
+            text-align: center;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 5;
+            border: 2px solid transparent;
+        }
+
+            .client-logo-item:hover {
+                transform: translateY(-10px) scale(1.05);
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+                border-color: #0058e7;
+            }
+
+        .client-logo {
+            max-width: 120px;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%) opacity(0.7);
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .client-logo-item:hover .client-logo {
+            filter: grayscale(0%) opacity(1);
+            transform: scale(1.1);
+        }
+
+        .client-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-top: 10px;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo-item:hover .client-name {
+            opacity: 1;
+            color: #0058e7;
+        }
+
+        /* Client Stats */
+        .client-stat {
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+            .client-stat:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                background: rgba(255, 255, 255, 0.95);
+            }
+
+            .client-stat h3 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                background: linear-gradient(135deg, #0058e7, #28a745);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .client-stat p {
+                color: #666;
+                font-weight: 500;
+            }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .clients-carousel-wrapper::before,
+            .clients-carousel-wrapper::after {
+                height: 25px;
+                font-size: 10px;
+                padding: 0 10px;
+            }
+
+            .clients-carousel-wrapper::before {
+                content: 'Our Partners • Our Partners • Our Partners • Our Partners • Our Partners • Our Partners • Our Partners • Our Partners • ';
+            }
+
+            .clients-carousel-wrapper::after {
+                content: '• Partners • Partners • Partners • Partners • Partners • Partners • Partners • Partners • Partners • Partners • ';
+            }
+
+            .client-logo-item {
+                margin: 0 30px;
+                min-width: 150px;
+                padding: 15px;
+            }
+
+            .client-logo {
+                max-width: 100px;
+                max-height: 60px;
+            }
+
+            .client-name {
+                font-size: 12px;
+            }
+
+            .clients-carousel {
+                animation-duration: 6s;
+            }
+
+            .client-stat {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+                .client-stat h3 {
+                    font-size: 2rem;
+                }
+        }
+
+        @media (max-width: 480px) {
+            .clients-carousel-wrapper {
+                padding: 50px 0;
+                margin: 20px 0;
+            }
+
+                .clients-carousel-wrapper::before,
+                .clients-carousel-wrapper::after {
+                    height: 20px;
+                    font-size: 9px;
+                    padding: 0 5px;
+                }
+
+                .clients-carousel-wrapper::before {
+                    content: 'Partners • Partners • Partners • Partners • Partners • Partners • Partners • ';
+                }
+
+                .clients-carousel-wrapper::after {
+                    content: '• Partners • Partners • Partners • Partners • Partners • Partners • Partners • ';
+                }
+
+            .client-logo-item {
+                margin: 0 20px;
+                min-width: 120px;
+            }
+
+            .client-logo {
+                max-width: 80px;
+                max-height: 50px;
+            }
+
+            .clients-carousel {
+                animation-duration: 4s;
+            }
+        }
+
+        /* Optional: If you want even simpler static borders without animation */
+        .simple-static-borders::before {
+            content: '• • • OUR TRUSTED PARTNERS • • • OUR TRUSTED PARTNERS • • • OUR TRUSTED PARTNERS • • •';
+            animation: none !important;
+            background: #0058e7 !important;
+            text-align: center !important;
+            justify-content: center !important;
+        }
+
+        .simple-static-borders::after {
+            content: '• • • TRUSTED PARTNERS • • • TRUSTED PARTNERS • • • TRUSTED PARTNERS • • • TRUSTED PARTNERS • • •';
+            animation: none !important;
+            background: #28a745 !important;
+            text-align: center !important;
+            justify-content: center !important;
+        }
+
+
+        /* Responsive Navigation Styling */
+        .team-carousel .owl-nav {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+            .team-carousel .owl-nav .owl-prev,
+            .team-carousel .owl-nav .owl-next {
+                margin: 0 12px;
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #0058e7;
+                background: rgba(0, 88, 231, 0.1);
+                border: 1px solid rgba(0, 88, 231, 0.2);
+                border-radius: 45px;
+                font-size: 20px;
+                transition: 0.5s;
+            }
+
+                .team-carousel .owl-nav .owl-prev:hover,
+                .team-carousel .owl-nav .owl-next:hover {
+                    background: #0058e7;
+                    color: white;
+                    border-color: #0058e7;
+                }
+
+        /* Hide navigation on large screens when not needed */
+        @media (min-width: 1200px) {
+            .team-carousel .owl-nav {
+                display: none !important;
+            }
+
+            .team-carousel .owl-dots {
+                display: none !important;
+            }
+        }
+
+        /* Show navigation on smaller screens */
+        @media (max-width: 1199px) {
+            .team-carousel .owl-nav {
+                display: flex !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .team-carousel .owl-dots {
+                display: flex !important;
+            }
+        }
+
+        .team-carousel .owl-dots {
+            margin-top: 25px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .team-carousel .owl-dot {
+            position: relative;
+            display: inline-block;
+            margin: 0 5px;
+            width: 15px;
+            height: 15px;
+            background: rgba(0, 88, 231, 0.2);
+            border-radius: 15px;
+            transition: 0.5s;
+        }
+
+            .team-carousel .owl-dot.active {
+                width: 40px;
+                background: #0058e7;
+            }
+
+
+    </style>
 </head>
 
 <body>
@@ -367,16 +773,100 @@
         </div>
     </div>
     <!-- Features End -->
-    <!-- Portfolio/Clients Start -->
+    <!-- Clients/Partners Section Start -->
+    <div class="container-fluid clients-section py-5 bg-light">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Trusted Partners</h4>
+                <h1 class="display-5 mb-4">Organizations That Trust Us</h1>
+                <p class="mb-0">
+                    We're proud to partner with leading educational institutions and organizations, delivering innovative software solutions that transform their operations.
+                </p>
+            </div>
+
+            <!-- Animated Logo Carousel with Decorative Borders -->
+            <div class="clients-carousel-wrapper simple-static-borders overflow-hidden position-relative">
+                <!-- Decorative Corner Elements -->
+                <div class="corner-decoration top-left"></div>
+                <div class="corner-decoration top-right"></div>
+                <div class="corner-decoration bottom-left"></div>
+                <div class="corner-decoration bottom-right"></div>
+
+                <!-- Lace Pattern Overlays -->
+                <div class="lace-pattern-top"></div>
+                <div class="lace-pattern-bottom"></div>
+
+                <div class="clients-carousel d-flex align-items-center">
+                    <!-- First set of logos -->
+                    <div class="client-logo-item">
+                        <img src="public/img/scclogo.png" alt="St. Cecilia's College-Cebu" class="client-logo">
+                        <span class="client-name">St. Cecilia's College-Cebu</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/bowssco-logo.jpg" alt="BOWSSCO" class="client-logo">
+                        <span class="client-name">BOWSSCO</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/miwassco-logo.jpg" alt="MIWASSCO" class="client-logo">
+                        <span class="client-name">MIWASSCO</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/GJFSI_Logo.png" alt="GJFSI" class="client-logo">
+                        <span class="client-name">GJFSI</span>
+                    </div>
+
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="client-logo-item">
+                        <img src="public/img/scclogo.png" alt="St. Cecilia's College-Cebu" class="client-logo">
+                        <span class="client-name">St. Cecilia's College-Cebu</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/bowssco-logo.jpg" alt="BOWSSCO" class="client-logo">
+                        <span class="client-name">BOWSSCO</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/miwassco-logo.png" alt="MIWASSCO" class="client-logo">
+                        <span class="client-name">MIWASSCO</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/GJFSI_Logo.png" alt="GJFSI" class="client-logo">
+                        <span class="client-name">GJFSI</span>
+                    </div>
+
+                    <!-- Third set for extra smoothness -->
+                    <div class="client-logo-item">
+                        <img src="public/img/scclogo.png" alt="St. Cecilia's College-Cebu" class="client-logo">
+                        <span class="client-name">St. Cecilia's College-Cebu</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/bowssco-logo.jpg" alt="BOWSSCO" class="client-logo">
+                        <span class="client-name">BOWSSCO</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/miwassco-logo.png" alt="MIWASSCO" class="client-logo">
+                        <span class="client-name">MIWASSCO</span>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="public/img/GJFSI_Logo.png" alt="GJFSI" class="client-logo">
+                        <span class="client-name">GJFSI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Stories Section -->
     <div class="container-fluid offer-section pb-5" id="portfolio">
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary">Our Success Stories</h4>
-                <h1 class="display-5 mb-4">Trusted by Leading Organizations</h1>
+                <h4 class="text-primary">Success Stories</h4>
+                <h1 class="display-5 mb-4">Our Client Implementations</h1>
                 <p class="mb-0">
-                    We're proud to have partnered with educational institutions and organizations across various sectors, delivering software solutions that drive efficiency and growth.
+                    Discover how we've helped our partners achieve their digital transformation goals with custom software solutions.
                 </p>
             </div>
+
             <div class="row g-5 align-items-center">
                 <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
                     <div class="nav nav-pills bg-light rounded p-5">
@@ -399,42 +889,42 @@
                         <div id="collapseOne" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                                 <div class="col-md-7">
-                                    <img src="public/img/offer-1.jpg" class="img-fluid w-100 rounded" alt="School Management System">
+                                    <img src="public/img/scclogo.png" class="img-fluid w-100 rounded" alt="School Management System">
                                 </div>
                                 <div class="col-md-5">
                                     <h1 class="display-5 mb-4">Comprehensive School Management</h1>
                                     <p class="mb-4">
                                         Successfully implemented a complete School Management System at St. Cecilia's College-Cebu, Inc., streamlining student enrollment, grade management, attendance tracking, and academic reporting processes.
                                     </p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="school-management.aspx">View Details</a>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="school-management.html">View Details</a>
                                 </div>
                             </div>
                         </div>
                         <div id="collapseTwo" class="tab-pane fade show p-0">
                             <div class="row g-4">
                                 <div class="col-md-7">
-                                    <img src="public/img/offer-2.jpg" class="img-fluid w-100 rounded" alt="Waterwork Information System">
+                                    <img src="public/img/bowssco-logo.jpg" class="img-fluid w-100 rounded" alt="Waterwork Information System">
                                 </div>
                                 <div class="col-md-5">
                                     <h1 class="display-5 mb-4">Water Utility Management</h1>
                                     <p class="mb-4">
                                         Deployed advanced Waterwork Information Systems for MIWASSCO and BOWSSCO, enabling efficient customer billing, service management, and infrastructure monitoring.
                                     </p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="waterwork-system.aspx">View Details</a>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="waterwork-system.html">View Details</a>
                                 </div>
                             </div>
                         </div>
                         <div id="collapseThree" class="tab-pane fade show p-0">
                             <div class="row g-4">
                                 <div class="col-md-7">
-                                    <img src="public/img/offer-3.jpg" class="img-fluid w-100 rounded" alt="School ID System">
+                                    <img src="public/img/GJFSI_Logo.png" class="img-fluid w-100 rounded" alt="School ID System">
                                 </div>
                                 <div class="col-md-5">
                                     <h1 class="display-5 mb-4">Digital ID Management</h1>
                                     <p class="mb-4">
                                         Implemented a comprehensive School ID System for GJFSI, featuring digital photo capture, card design, printing capabilities, and integrated database management.
                                     </p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="school-id-system.aspx">View Details</a>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="school-id-system.html">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -448,7 +938,7 @@
                                     <p class="mb-4">
                                         Custom Event Management Systems designed for various organizations, providing complete event planning, registration, ticketing, and attendee management solutions.
                                     </p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="event-management.aspx">View Details</a>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="event-management.html">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -457,6 +947,7 @@
             </div>
         </div>
     </div>
+    <!-- Success Stories Section End -->
     <!-- Portfolio/Clients End -->
     <!-- Blog Start -->
     <div class="container-fluid blog pb-5">
@@ -624,75 +1115,122 @@
                     Our talented team of software developers and IT professionals brings years of experience in creating innovative solutions for diverse industries.
                 </p>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="public/img/team-2.jpg" class="img-fluid" alt="Peter John Z. Beroy">
-                        </div>
-                        <div class="team-title">
-                            <h4 class="mb-0">Peter John Z. Beroy</h4>
-                            <p class="mb-0">Senior Software Developer</p>
-                        </div>
-                        <div class="team-icon">
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
+
+            <!-- Team Carousel - keeping all your existing Bootstrap classes -->
+            <div class="owl-carousel team-carousel wow fadeInUp" data-wow-delay="0.2s">
+
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="public/img/team-2.jpg" class="img-fluid" alt="Peter John Z. Beroy">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Peter John Z. Beroy</h4>
+                        <p class="mb-0">Senior Software Developer</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="public/img/team-1.jpg" class="img-fluid" alt="Edwin Ortega">
-                        </div>
-                        <div class="team-title">
-                            <h4 class="mb-0">Edwin Ortega</h4>
-                            <p class="mb-0">Full Stack Developer</p>
-                        </div>
-                        <div class="team-icon">
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
+
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="public/img/team-1.jpg" class="img-fluid" alt="Edwin Ortega">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Edwin Ortega</h4>
+                        <p class="mb-0">Full Stack Developer</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="public/img/team-3.jpg" class="img-fluid" alt="Genesis Baraclan">
-                        </div>
-                        <div class="team-title">
-                            <h4 class="mb-0">Genesis Baraclan</h4>
-                            <p class="mb-0">Software Developer</p>
-                        </div>
-                        <div class="team-icon">
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
+
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="public/img/team-3.jpg" class="img-fluid" alt="Genesis Baraclan">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Genesis Baraclan</h4>
+                        <p class="mb-0">Software Developer</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="public/img/team-4.jpg" class="img-fluid" alt="Francis Charles Mangaron">
-                        </div>
-                        <div class="team-title">
-                            <h4 class="mb-0">Francis Charles Mangaron</h4>
-                            <p class="mb-0">Systems Analyst</p>
-                        </div>
-                        <div class="team-icon">
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
+
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="public/img/team-4.jpg" class="img-fluid" alt="Francis Charles Mangaron">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Francis Charles Mangaron</h4>
+                        <p class="mb-0">Systems Analyst</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="public/img/team-3.jpg" class="img-fluid" alt="Dr. Alfredo S. Moreno">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Dr. Alfredo S. Moreno</h4>
+                        <p class="mb-0">Senior Systems Analyst</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="public/img/team-2.jpg" class="img-fluid" alt="Joel Rubia">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Joel Rubia</h4>
+                        <p class="mb-0">Database Administrator</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="public/img/team-1.jpg" class="img-fluid" alt="Angelika Singcol">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Angelika Singcol</h4>
+                        <p class="mb-0">UI/UX Designer</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -909,6 +1447,8 @@
 
     <!-- Template Javascript -->
     <script src="public/js/main.js"></script>
+    <!-- Template Javascript -->
+    <script src="public/js/team-carousel-script.js"></script>
 </body>
 
 </html>
