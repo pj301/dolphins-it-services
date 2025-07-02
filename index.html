@@ -1,10 +1,9 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Dolphin's IT Services - Custom Software Solutions</title>
+    <link rel="icon" href="public/assets/dolphin.ico" type="image/x-icon" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="software development, school management system, waterwork information system, event management, school ID system, IT services, custom software solutions" name="keywords">
     <meta content="Dolphin's IT Services provides custom software solutions including School Management Systems, Waterwork Information Systems, Event Management Systems, and School ID Systems for educational institutions and organizations." name="description">
@@ -29,6 +28,7 @@
     <!-- Template Stylesheet -->
     <link href="public/css/style.css" rel="stylesheet">
     <link href="public/css/custom.css" rel="stylesheet">
+
 
     <style>
         .header-carousel .owl-nav .owl-prev,
@@ -434,11 +434,171 @@
             }
 
 
+
+        .event-slider {
+            position: fixed;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100vh;
+            background: #ffffff;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            transition: right 0.4s ease-in-out;
+            z-index: 9999;
+            overflow-y: auto;
+        }
+
+            .event-slider.active {
+                right: 0;
+            }
+
+        .slider-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease-in-out;
+            z-index: 9998;
+        }
+
+            .slider-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+        .slider-header {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .slider-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+            .slider-close:hover {
+                transform: scale(1.1);
+                color: #ffc107;
+            }
+
+        .slider-content {
+            padding: 30px;
+        }
+
+        .event-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #007bff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .event-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,123,255,0.15);
+            }
+
+        .event-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .workflow-section {
+            background: #e3f2fd;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .actor-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 2px solid #e9ecef;
+            transition: border-color 0.3s;
+        }
+
+            .actor-card:hover {
+                border-color: #007bff;
+            }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+            .feature-list li {
+                padding: 8px 0;
+                border-bottom: 1px solid #e9ecef;
+            }
+
+                .feature-list li:last-child {
+                    border-bottom: none;
+                }
+
+                .feature-list li i {
+                    color: #007bff;
+                    margin-right: 10px;
+                }
+
+        @media (max-width: 768px) {
+            .event-slider {
+                width: 90%;
+                right: -90%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .event-slider {
+                width: 100%;
+                right: -100%;
+            }
+
+            .slider-content {
+                padding: 20px;
+            }
+        }
+        .owl-prev {
+            display: none !important;
+        }
+        .owl-next {
+            display: none !important;
+        }
+
+        @media (max-width: 420px) {
+            .event-management-text {
+                display: none;
+            }
+        }
+
+
     </style>
 </head>
 
 <body>
-
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -595,7 +755,6 @@
                 <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="bg-primary rounded position-relative overflow-hidden">
                         <img src="public/img/about-2.png" class="img-fluid rounded w-100" alt="Software Development Team">
-
                         <div class="" style="position: absolute; top: -15px; right: -15px;">
                             <img src="public/img/about-3.png" class="img-fluid" style="width: 150px; height: 150px; opacity: 0.7;" alt="">
                         </div>
@@ -656,11 +815,11 @@
                             <img src="public/img/service-3.jpg" class="img-fluid rounded-top w-100" alt="Event Management System">
                         </div>
                         <div class="rounded-bottom p-4">
-                            <a href="event-management.aspx" class="h4 d-inline-block mb-4">Event Management System</a>
+                            <a href="#" class="h4 d-inline-block mb-4">Event Management System</a>
                             <p class="mb-4">
                                 Complete event planning and management solution with registration, ticketing, scheduling, and attendee management capabilities.
                             </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="event-management.aspx">Learn More</a>
+                            <button class="btn btn-primary rounded-pill py-2 px-4" onclick="openEventSlider()">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -1432,6 +1591,18 @@
         </div>
     </div>
     <!-- Copyright End -->
+    <!-- Event Management Slider -->
+    <div class="slider-overlay" id="sliderOverlay" onclick="closeEventSlider()"></div>
+    <div class="event-slider" id="eventSlider">
+        <div class="slider-header">
+            <h2 style="color: white;"><i class="fas fa-calendar-alt me-3" style="color: white !important;"></i><span class="event-management-text">Event Management System</span></h2>
+            <button class="slider-close" onclick="closeEventSlider()">×</button>
+        </div>
+        <div class="slider-content" id="sliderContent">
+            <!-- Content will be loaded here -->
+        </div>
+    </div>
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
@@ -1447,8 +1618,54 @@
 
     <!-- Template Javascript -->
     <script src="public/js/main.js"></script>
+
     <!-- Template Javascript -->
     <script src="public/js/team-carousel-script.js"></script>
-</body>
 
+
+
+
+    <!-- Event Slider JavaScript -->
+    <script>
+        function openEventSlider() {
+            const slider = document.getElementById('eventSlider');
+            const overlay = document.getElementById('sliderOverlay');
+            const content = document.getElementById('sliderContent');
+
+            // Load events.html content
+            fetch('events.html')
+                .then(response => response.text())
+                .then(html => {
+                    content.innerHTML = html;
+                    slider.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                })
+                .catch(error => {
+                    console.error('Error loading events content:', error);
+                    content.innerHTML = '<p class="text-center text-danger">Error loading content. Please try again.</p>';
+                    slider.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+        }
+
+       
+        function closeEventSlider() {
+            const slider = document.getElementById('eventSlider');
+            const overlay = document.getElementById('sliderOverlay');
+
+            slider.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close slider on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeEventSlider();
+            }
+        });
+    </script>
+</body>
 </html>
