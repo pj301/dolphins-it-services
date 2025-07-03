@@ -99,6 +99,16 @@
     <Content Include="public\assets\album.png" />
     <Content Include="public\assets\creation.png" />
     <Content Include="public\assets\dolphin.ico" />
+    <Content Include="public\assets\gallery.png" />
+    <Content Include="public\assets\idalumni.png" />
+    <Content Include="public\assets\idashboard.png" />
+    <Content Include="public\assets\idedit.png" />
+    <Content Include="public\assets\idemployee.png" />
+    <Content Include="public\assets\idlogin.png" />
+    <Content Include="public\assets\idpm.png" />
+    <Content Include="public\assets\idpreview.png" />
+    <Content Include="public\assets\idprint.png" />
+    <Content Include="public\assets\idstudent.png" />
     <Content Include="public\assets\qr.png" />
     <Content Include="public\assets\ringlanding.png" />
     <Content Include="public\assets\ringorg.png" />
@@ -110,19 +120,48 @@
     <Content Include="public\css\bootstrap.min.css" />
     <Content Include="public\css\custom.css" />
     <Content Include="public\css\el_demo.css" />
+    <Content Include="public\css\fonts\eiconsf884.eot" />
     <Content Include="public\css\fonts\eiconsf884.svg" />
+    <Content Include="public\css\fonts\eiconsf884.ttf" />
+    <Content Include="public\css\fonts\eiconsf884.woff" />
+    <Content Include="public\css\fonts\eiconsf884.woff2" />
+    <Content Include="public\css\fonts\fa-brands-400.eot" />
     <Content Include="public\css\fonts\fa-brands-400.svg" />
+    <Content Include="public\css\fonts\fa-brands-400.ttf" />
+    <Content Include="public\css\fonts\fa-brands-400.woff" />
+    <Content Include="public\css\fonts\fa-brands-400.woff2" />
+    <Content Include="public\css\fonts\fa-brands-400d41d.eot" />
+    <Content Include="public\css\fonts\fa-regular-400.eot" />
     <Content Include="public\css\fonts\fa-regular-400.svg" />
+    <Content Include="public\css\fonts\fa-regular-400.ttf" />
+    <Content Include="public\css\fonts\fa-regular-400.woff" />
+    <Content Include="public\css\fonts\fa-regular-400.woff2" />
+    <Content Include="public\css\fonts\fa-regular-400d41d.eot" />
+    <Content Include="public\css\fonts\fa-solid-900.eot" />
     <Content Include="public\css\fonts\fa-solid-900.svg" />
+    <Content Include="public\css\fonts\fa-solid-900.ttf" />
+    <Content Include="public\css\fonts\fa-solid-900.woff" />
+    <Content Include="public\css\fonts\fa-solid-900.woff2" />
+    <Content Include="public\css\fonts\fa-solid-900d41d.eot" />
     <Content Include="public\css\fonts\mfn-icons.css" />
+    <Content Include="public\css\fonts\mfn-icons.eot" />
     <Content Include="public\css\fonts\mfn-icons.svg" />
+    <Content Include="public\css\fonts\mfn-icons.ttf" />
+    <Content Include="public\css\fonts\mfn-icons.woff" />
+    <Content Include="public\css\fonts\star.eot" />
     <Content Include="public\css\fonts\star.svg" />
+    <Content Include="public\css\fonts\star.ttf" />
+    <Content Include="public\css\fonts\star.woff" />
+    <Content Include="public\css\fonts\WooCommerce.eot" />
     <Content Include="public\css\fonts\WooCommerce.svg" />
+    <Content Include="public\css\fonts\WooCommerce.ttf" />
+    <Content Include="public\css\fonts\WooCommerce.woff" />
     <Content Include="public\css\global.css" />
     <Content Include="public\css\images\jplayer.blue.monday.jpg" />
     <Content Include="public\css\images\jplayer.blue.monday.seeking.gif" />
     <Content Include="public\css\images\jplayer.blue.monday.video.play.png" />
     <Content Include="public\css\images\jplayer.png" />
+    <Content Include="public\css\images\Thumbs.db" />
     <Content Include="public\css\mfn-icons.css" />
     <Content Include="public\css\pretty.css" />
     <Content Include="public\css\skins\blue\stylec721.css" />
@@ -215,6 +254,7 @@
     <Content Include="public\img\bg1.jpg" />
     <Content Include="public\img\bg2.jpg" />
     <Content Include="public\img\bg3.jpg" />
+    <Content Include="public\img\bowssco-logo.jpg" />
     <Content Include="public\img\carousel-1.jpg" />
     <Content Include="public\img\carousel-2.jpg" />
     <Content Include="public\img\Dolphin-logo.png" />
@@ -226,10 +266,12 @@
     <Content Include="public\img\genesis.jpg" />
     <Content Include="public\img\genesis.png" />
     <Content Include="public\img\gjfsi.png" />
+    <Content Include="public\img\GJFSI_Logo.png" />
     <Content Include="public\img\header-1.png" />
     <Content Include="public\img\logo.jpg" />
     <Content Include="public\img\logo.png" />
     <Content Include="public\img\logo2.png" />
+    <Content Include="public\img\miwassco-logo.jpg" />
     <Content Include="public\img\miwassco.jpg" />
     <Content Include="public\img\miwassco1.png" />
     <Content Include="public\img\offer-1.jpg" />
@@ -238,6 +280,7 @@
     <Content Include="public\img\offer-4.jpg" />
     <Content Include="public\img\peters.png" />
     <Content Include="public\img\Ringhop.png" />
+    <Content Include="public\img\scclogo.png" />
     <Content Include="public\img\service-1.jpg" />
     <Content Include="public\img\service-2.jpg" />
     <Content Include="public\img\service-3.jpg" />
@@ -252,6 +295,7 @@
     <Content Include="public\img\testimonial-1.jpg" />
     <Content Include="public\img\testimonial-2.jpg" />
     <Content Include="public\img\testimonial-3.jpg" />
+    <Content Include="public\img\Thumbs.db" />
     <Content Include="public\img\watersystem.png" />
     <Content Include="public\img\watersystem1.png" />
     <Content Include="public\img\Wedding.PNG" />
@@ -269,6 +313,7 @@
     <Content Include="public\js\mfn.menu.js" />
     <Content Include="public\js\num.js" />
     <Content Include="public\js\scripts.js" />
+    <Content Include="public\js\team-carousel-script.js" />
     <Content Include="public\js\translate3d.js" />
     <Content Include="public\js\ui\jquery-ui-1.8.22.custom.js" />
     <Content Include="public\js\ui\jquery-ui.min.js" />
@@ -295,100 +340,13 @@
     <Content Include="public\lib\owlcarousel\assets\owl.theme.green.css" />
     <Content Include="public\lib\owlcarousel\assets\owl.theme.green.min.css" />
     <Content Include="public\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="public\lib\owlcarousel\LICENSE" />
     <Content Include="public\lib\owlcarousel\owl.carousel.js" />
     <Content Include="public\lib\owlcarousel\owl.carousel.min.js" />
     <Content Include="public\lib\waypoints\links.php" />
     <Content Include="public\lib\waypoints\waypoints.min.js" />
     <Content Include="public\lib\wow\wow.js" />
     <Content Include="public\lib\wow\wow.min.js" />
-    <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="index.aspx.designer.vb">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="index.aspx.vb">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="LandingPage.aspx.designer.vb">
-      <DependentUpon>LandingPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LandingPage.aspx.vb">
-      <DependentUpon>LandingPage.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
-      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
-      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\Application.myapp">
-      <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <CustomToolNamespace>My</CustomToolNamespace>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="packages.config" />
-    <Content Include="vercel.json" />
-    <Content Include="public\css\fonts\eiconsf884.eot" />
-    <Content Include="public\css\fonts\eiconsf884.ttf" />
-    <Content Include="public\css\fonts\eiconsf884.woff" />
-    <Content Include="public\css\fonts\eiconsf884.woff2" />
-    <Content Include="public\css\fonts\fa-brands-400.eot" />
-    <Content Include="public\css\fonts\fa-brands-400.ttf" />
-    <Content Include="public\css\fonts\fa-brands-400.woff" />
-    <Content Include="public\css\fonts\fa-brands-400.woff2" />
-    <Content Include="public\css\fonts\fa-brands-400d41d.eot" />
-    <Content Include="public\css\fonts\fa-regular-400.eot" />
-    <Content Include="public\css\fonts\fa-regular-400.ttf" />
-    <Content Include="public\css\fonts\fa-regular-400.woff" />
-    <Content Include="public\css\fonts\fa-regular-400.woff2" />
-    <Content Include="public\css\fonts\fa-regular-400d41d.eot" />
-    <Content Include="public\css\fonts\fa-solid-900.eot" />
-    <Content Include="public\css\fonts\fa-solid-900.ttf" />
-    <Content Include="public\css\fonts\fa-solid-900.woff" />
-    <Content Include="public\css\fonts\fa-solid-900.woff2" />
-    <Content Include="public\css\fonts\fa-solid-900d41d.eot" />
-    <Content Include="public\css\fonts\mfn-icons.eot" />
-    <Content Include="public\css\fonts\mfn-icons.ttf" />
-    <Content Include="public\css\fonts\mfn-icons.woff" />
-    <Content Include="public\css\fonts\star.eot" />
-    <Content Include="public\css\fonts\star.ttf" />
-    <Content Include="public\css\fonts\star.woff" />
-    <Content Include="public\css\fonts\WooCommerce.eot" />
-    <Content Include="public\css\fonts\WooCommerce.ttf" />
-    <Content Include="public\css\fonts\WooCommerce.woff" />
-    <Content Include="public\css\images\Thumbs.db" />
-    <Content Include="public\img\Thumbs.db" />
-    <Content Include="public\lib\owlcarousel\LICENSE" />
     <Content Include="public\scss\bootstrap.scss" />
     <Content Include="public\scss\bootstrap\scss\bootstrap-grid.scss" />
     <Content Include="public\scss\bootstrap\scss\bootstrap-reboot.scss" />
@@ -471,6 +429,64 @@
     <Content Include="public\scss\bootstrap\scss\_type.scss" />
     <Content Include="public\scss\bootstrap\scss\_utilities.scss" />
     <Content Include="public\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="school-id-system.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LandingPage.aspx.designer.vb">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.aspx.vb">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="vercel.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
