@@ -623,96 +623,63 @@
         </div>
     </div>
     <!-- Spinner End -->
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <img src="public/img/logo2.png" alt="Dolphin's IT Services Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="#" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">About</a>
-                    <a href="#" class="nav-item nav-link">Services</a>
-                    <a href="#" class="nav-item nav-link">Portfolio</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                            <span class="dropdown-toggle">Solutions</span>
-                        </a>
-                        <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">School Management System</a>
-                            <a href="#" class="dropdown-item">Waterwork Information System</a>
-                            <a href="#" class="dropdown-item">Event Management System</a>
-                            <a href="#x" class="dropdown-item">School ID System</a>
-                        </div>
+    <!-- UPDATED NAVBAR WITH DYNAMIC FUNCTIONALITY -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-transparent px-4 px-lg-5 py-3 py-lg-0" id="mainNavbar">
+        <a href="" class="navbar-brand p-0">
+            <img src="public/img/logo.png" alt="Dolphin's IT Services Logo" id="navbarLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.aspx" class="nav-item nav-link active">Home</a>
+                <a href="about.aspx" class="nav-item nav-link">About</a>
+                <a href="services.aspx" class="nav-item nav-link">Services</a>
+                <a href="portfolio.aspx" class="nav-item nav-link">Portfolio</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                        <span class="dropdown-toggle">Solutions</span>
+                    </a>
+                    <div class="dropdown-menu m-0">
+                        <a href="school-management.aspx" class="dropdown-item">School Management System</a>
+                        <a href="waterwork-system.aspx" class="dropdown-item">Waterwork Information System</a>
+                        <a href="event-management.aspx" class="dropdown-item">Event Management System</a>
+                        <a href="school-id-system.aspx" class="dropdown-item">School ID System</a>
                     </div>
-                    <a href="#" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Get Quote</a>
+                <a href="contact.aspx" class="nav-item nav-link">Contact Us</a>
             </div>
-        </nav>
+            <a href="contact.aspx" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Get Quote</a>
+        </div>
+    </nav>
 
-        <!-- Carousel Start -->
-        <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item">
-                <img src="public/img/bg3.jpg" class="img-fluid w-100" alt="Software Development">
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row gy-0 gx-5">
-                            <div class="col-lg-0 col-xl-5"></div>
-                            <div class="col-xl-7 animated fadeInLeft">
-                                <div class="text-sm-center text-md-end">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Dolphin's IT Services</h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">Custom Software Solutions for Your Business</h1>
-                                    <p class="mb-5 fs-5">
-                                        Empowering educational institutions and organizations with innovative software solutions. From School Management Systems to specialized applications, we deliver technology that transforms your operations.
-                                    </p>
-                                    <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#portfolio"><i class="fas fa-eye me-2"></i> View Portfolio</a>
-                                        <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#services">Our Services</a>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center justify-content-md-end">
-                                        <h2 class="text-white me-2">Follow Us:</h2>
-                                        <div class="d-flex justify-content-end ms-2">
-                                            <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
+    <!-- Carousel Start -->
+    <div class="header-carousel owl-carousel">
+        <div class="header-carousel-item">
+            <img src="public/img/bg3.jpg" class="img-fluid w-100" alt="Software Development">
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row gy-0 gx-5">
+                        <div class="col-lg-0 col-xl-5"></div>
+                        <div class="col-xl-7 animated fadeInLeft">
+                            <div class="text-sm-center text-md-end">
+                                <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Dolphin's IT Services</h4>
+                                <h1 class="display-4 text-uppercase text-white mb-4">Custom Software Solutions for Your Business</h1>
+                                <p class="mb-5 fs-5">
+                                    Empowering educational institutions and organizations with innovative software solutions. From School Management Systems to specialized applications, we deliver technology that transforms your operations.
+                                </p>
+                                <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                    <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#portfolio"><i class="fas fa-eye me-2"></i> View Portfolio</a>
+                                    <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#services">Our Services</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-carousel-item">
-                <img src="public/img/bg2.jpg" class="img-fluid w-100" alt="IT Solutions">
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row g-5">
-                            <div class="col-12 animated fadeInUp">
-                                <div class="text-center">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Trusted IT Partner</h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">Building Tomorrow's Technology Today</h1>
-                                    <p class="mb-5 fs-5">
-                                        Partner with us to digitize your operations with cutting-edge software solutions. We specialize in educational technology, management systems, and custom applications tailored to your needs.
-                                    </p>
-                                    <div class="d-flex justify-content-center flex-shrink-0 mb-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#about"><i class="fas fa-info-circle me-2"></i> Learn More</a>
-                                        <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Start Project</a>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <h2 class="text-white me-2">Follow Us:</h2>
-                                        <div class="d-flex justify-content-end ms-2">
-                                            <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
+                                <div class="d-flex align-items-center justify-content-center justify-content-md-end">
+                                    <h2 class="text-white me-2">Follow Us:</h2>
+                                    <div class="d-flex justify-content-end ms-2">
+                                        <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -721,7 +688,39 @@
                 </div>
             </div>
         </div>
-        <!-- Carousel End -->
+        <div class="header-carousel-item">
+            <img src="public/img/bg2.jpg" class="img-fluid w-100" alt="IT Solutions">
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-12 animated fadeInUp">
+                            <div class="text-center">
+                                <h4 class="text-primary text-uppercase fw-bold mb-4">Trusted IT Partner</h4>
+                                <h1 class="display-4 text-uppercase text-white mb-4">Building Tomorrow's Technology Today</h1>
+                                <p class="mb-5 fs-5">
+                                    Partner with us to digitize your operations with cutting-edge software solutions. We specialize in educational technology, management systems, and custom applications tailored to your needs.
+                                </p>
+                                <div class="d-flex justify-content-center flex-shrink-0 mb-4">
+                                    <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#about"><i class="fas fa-info-circle me-2"></i> Learn More</a>
+                                    <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Start Project</a>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <h2 class="text-white me-2">Follow Us:</h2>
+                                    <div class="d-flex justify-content-end ms-2">
+                                        <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
     </div>
     <!-- Navbar & Hero End -->
     <!-- About Start -->
@@ -1672,7 +1671,7 @@
                 });
         }
 
-       
+
         function closeEventSlider() {
             const slider = document.getElementById('eventSlider');
             const overlay = document.getElementById('sliderOverlay');
@@ -1691,7 +1690,7 @@
         });
 
 
-       
+
         function openSchoolIdSlider() {
             const slider = document.getElementById('eventSlider');
             const overlay = document.getElementById('sliderOverlay');
@@ -1778,6 +1777,93 @@
                     document.body.style.overflow = 'hidden';
                 });
         }
+    </script>
+    <!-- DYNAMIC NAVBAR LOGO SWITCHING SCRIPT -->
+    <script>
+        // Dynamic Navbar and Logo Switching Script
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('mainNavbar');
+            const logo = document.getElementById('navbarLogo');
+
+            // Logo paths - Update these to match your actual file paths
+            const logoDefault = 'public/img/logo.png';     // Transparent navbar logo
+            const logoScrolled = 'public/img/logo2.png';   // Scrolled navbar logo
+
+            let isScrolled = false;
+            let ticking = false;
+
+            // Function to check if we're on mobile/tablet
+            function isMobileDevice() {
+                return window.innerWidth <= 991; // Bootstrap's lg breakpoint
+            }
+
+            // Smooth logo transition function
+            function switchLogo(newSrc) {
+                if (logo.src.endsWith(newSrc.split('/').pop())) {
+                    return; // Don't switch if it's already the correct logo
+                }
+
+                logo.style.opacity = '0';
+
+                setTimeout(() => {
+                    logo.src = newSrc;
+                    logo.style.opacity = '1';
+                }, 150);
+            }
+
+            // Scroll handler function
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const shouldBeScrolled = scrollTop > 50; // Trigger point - adjust as needed
+                const isMobile = isMobileDevice();
+
+                if (isMobile) {
+                    // On mobile, always use logo2.png since navbar is always solid
+                    navbar.classList.remove('navbar-transparent');
+                    navbar.classList.add('navbar-scrolled');
+                    switchLogo(logoScrolled);
+                    isScrolled = true;
+                } else {
+                    // Desktop behavior
+                    if (shouldBeScrolled && !isScrolled) {
+                        // Switch to scrolled state
+                        navbar.classList.remove('navbar-transparent');
+                        navbar.classList.add('navbar-scrolled');
+                        switchLogo(logoScrolled);
+                        isScrolled = true;
+                    } else if (!shouldBeScrolled && isScrolled) {
+                        // Switch to transparent state
+                        navbar.classList.remove('navbar-scrolled');
+                        navbar.classList.add('navbar-transparent');
+                        switchLogo(logoDefault);
+                        isScrolled = false;
+                    }
+                }
+
+                ticking = false;
+            }
+
+            // Optimized scroll event listener
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(handleScroll);
+                    ticking = true;
+                }
+            }
+
+            // Handle window resize
+            function onResize() {
+                // Re-evaluate on resize to handle orientation changes
+                handleScroll();
+            }
+
+            // Add event listeners
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onResize);
+
+            // Initialize navbar state
+            handleScroll();
+        });
     </script>
 </body>
 </html>
