@@ -588,9 +588,26 @@
             display: none !important;
         }
 
-        @media (max-width: 420px) {
-            .event-management-text {
-                display: none;
+        .slider-title {
+            color: white !important;
+            margin: 0;
+            font-size: 24px; 
+        }
+
+            .slider-title i {
+                color: white !important;
+            }
+
+       
+        @media (max-width: 425px) {
+            .slider-title {
+                font-size: 20px !important;
+            }
+        }
+
+        @media (max-width: 376px) {
+            .slider-title {
+                font-size: 15px !important;
             }
         }
 
@@ -791,7 +808,7 @@
                             <p class="mb-4">
                                 Comprehensive student information system managing enrollment, grades, attendance, and academic records. Successfully implemented at St. Cecilia's College-Cebu, Inc.
                             </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" onclick="openSchoolSlider()">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -805,7 +822,7 @@
                             <p class="mb-4">
                                 Advanced water utility management system for billing, customer management, and infrastructure monitoring. Deployed at MIWASSCO and BOWSSCO.
                             </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                            <button class="btn btn-primary rounded-pill py-2 px-4" onclick="openWaterworksSlider()">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -1595,7 +1612,7 @@
     <div class="slider-overlay" id="sliderOverlay" onclick="closeEventSlider()"></div>
     <div class="event-slider" id="eventSlider">
         <div class="slider-header">
-            <h2 style="color: white;"><i class="fas fa-calendar-alt me-3" style="color: white !important;"></i><span class="event-management-text">Event Management System</span></h2>
+            <h2 class="slider-title"><i class="fas fa-calendar-alt me-3"></i><span class="event-management-text">Event Management System</span></h2>
             <button class="slider-close" onclick="closeEventSlider()">×</button>
         </div>
         <div class="slider-content" id="sliderContent">
@@ -1635,6 +1652,7 @@
 
             // Update header for Event Management
             header.innerHTML = '<i class="fas fa-calendar-alt me-3"></i>Event Management System';
+            header.classList.add('slider-title');
 
             // Load events.html content
             fetch('events.html')
@@ -1682,6 +1700,7 @@
 
             // Update header for School ID System
             header.innerHTML = '<i class="fas fa-id-card me-3"></i>School ID System';
+            header.classList.add('slider-title');
 
             // Load school-id-system.html content
             fetch('school-id-system.html')
@@ -1694,6 +1713,65 @@
                 })
                 .catch(error => {
                     console.error('Error loading school ID system content:', error);
+                    content.innerHTML = '<p class="text-center text-danger">Error loading content. Please try again.</p>';
+                    slider.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+        }
+
+
+        // waterworks slider
+        function openWaterworksSlider() {
+            const slider = document.getElementById('eventSlider');
+            const overlay = document.getElementById('sliderOverlay');
+            const content = document.getElementById('sliderContent');
+            const header = document.querySelector('.slider-header h2');
+
+            // Update header for Waterworks System
+            header.innerHTML = '<i class="fas fa-tint me-3"></i>Waterworks Information System';
+            header.classList.add('slider-title');
+
+            // Load waterworks.html content
+            fetch('waterworks.html')
+                .then(response => response.text())
+                .then(html => {
+                    content.innerHTML = html;
+                    slider.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                })
+                .catch(error => {
+                    console.error('Error loading waterworks content:', error);
+                    content.innerHTML = '<p class="text-center text-danger">Error loading content. Please try again.</p>';
+                    slider.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+        }
+
+        // school slider
+        function openSchoolSlider() {
+            const slider = document.getElementById('eventSlider');
+            const overlay = document.getElementById('sliderOverlay');
+            const content = document.getElementById('sliderContent');
+            const header = document.querySelector('.slider-header h2');
+
+            // Update header for Waterworks System
+            header.innerHTML = '<i class="fas fa-graduation-cap me-3"></i>School Management System';
+            header.classList.add('slider-title');
+
+            // Load waterworks.html content
+            fetch('school.html')
+                .then(response => response.text())
+                .then(html => {
+                    content.innerHTML = html;
+                    slider.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                })
+                .catch(error => {
+                    console.error('Error loading waterworks content:', error);
                     content.innerHTML = '<p class="text-center text-danger">Error loading content. Please try again.</p>';
                     slider.classList.add('active');
                     overlay.classList.add('active');
