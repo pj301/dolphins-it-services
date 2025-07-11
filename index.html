@@ -611,6 +611,339 @@
             }
         }
 
+        /* Modern About Section Styles */
+        :root {
+            --primary-color: #0058e7;
+            --secondary-color: #0047b8;
+            --accent-color: #1a6bff;
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --light-bg: rgba(0, 88, 231, 0.05);
+            --border-color: rgba(0, 88, 231, 0.1);
+        }
+
+        .about {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .about::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e9ecef" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+                opacity: 0.3;
+                z-index: 1;
+            }
+
+            .about .container {
+                position: relative;
+                z-index: 2;
+            }
+
+            .about .section-title {
+                color: var(--primary-color);
+                font-weight: 600;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 1rem;
+                position: relative;
+            }
+
+                .about .section-title::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 50px;
+                    height: 3px;
+                    background: var(--primary-color);
+                    border-radius: 2px;
+                }
+
+            .about .display-5 {
+                color: var(--text-dark);
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 2rem;
+            }
+
+            .about .lead-text {
+                color: var(--text-light);
+                font-size: 1.1rem;
+                line-height: 1.7;
+                margin-bottom: 3rem;
+            }
+
+            .about .feature-card {
+                background: white;
+                border-radius: 15px;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                border: 1px solid var(--border-color);
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+            }
+
+                .about .feature-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 4px;
+                    background: var(--primary-color);
+                    transform: scaleX(0);
+                    transition: transform 0.3s ease;
+                }
+
+                .about .feature-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 20px 40px rgba(0, 88, 231, 0.15);
+                }
+
+                    .about .feature-card:hover::before {
+                        transform: scaleX(1);
+                    }
+
+            .about .feature-icon {
+                width: 70px;
+                height: 70px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1.5rem;
+                transition: all 0.3s ease;
+            }
+
+            .about .feature-card:hover .feature-icon {
+                transform: scale(1.1) rotate(5deg);
+                background: var(--secondary-color);
+            }
+
+            .about .feature-icon i {
+                color: white;
+                font-size: 1.8rem;
+            }
+
+            .about .feature-title {
+                color: var(--text-dark);
+                font-weight: 600;
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
+            }
+
+            .about .feature-text {
+                color: var(--text-light);
+                line-height: 1.6;
+                font-size: 0.95rem;
+            }
+
+            .about .cta-button {
+                background: var(--primary-color);
+                border: none;
+                border-radius: 50px;
+                padding: 15px 35px;
+                color: white;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-block;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0, 88, 231, 0.3);
+                position: relative;
+                overflow: hidden;
+            }
+
+                .about .cta-button::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                    transition: left 0.5s ease;
+                }
+
+                .about .cta-button:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 25px rgba(0, 88, 231, 0.4);
+                    background: var(--secondary-color);
+                    color: white;
+                    text-decoration: none;
+                }
+
+                    .about .cta-button:hover::before {
+                        left: 100%;
+                    }
+
+            .about .org-chart-container {
+                position: relative;
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                border: 2px solid var(--border-color);
+            }
+
+                .about .org-chart-container::before {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    width: 200%;
+                    height: 200%;
+                    background: var(--light-bg);
+                    transform: rotate(45deg);
+                    z-index: 1;
+                }
+
+            .about .org-chart-img {
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                transition: all 0.3s ease;
+                position: relative;
+                z-index: 2;
+            }
+
+            .about .org-chart-container:hover {
+                border-color: var(--primary-color);
+            }
+
+                .about .org-chart-container:hover .org-chart-img {
+                    transform: scale(1.02);
+                }
+
+            .about .chart-overlay {
+                position: absolute;
+                bottom: 2rem;
+                left: 2rem;
+                right: 2rem;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border-radius: 10px;
+                padding: 1.5rem;
+                z-index: 3;
+                transform: translateY(100%);
+                transition: transform 0.3s ease;
+                border: 1px solid var(--border-color);
+            }
+
+            .about .org-chart-container:hover .chart-overlay {
+                transform: translateY(0);
+            }
+
+            .about .chart-overlay h5 {
+                color: var(--primary-color);
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+
+            .about .chart-overlay p {
+                color: var(--text-light);
+                margin: 0;
+                font-size: 0.9rem;
+            }
+
+        /* Animation Classes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about .animate-on-scroll {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .about .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .about .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .about .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about .feature-card {
+                margin-bottom: 2rem;
+            }
+
+            .about .display-5 {
+                font-size: 2rem;
+            }
+
+            .about .org-chart-container {
+                margin-top: 3rem;
+            }
+
+            .about .lead-text {
+                font-size: 1rem;
+            }
+
+            .about .feature-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+                .about .feature-icon i {
+                    font-size: 1.5rem;
+                }
+        }
+
+        @media (max-width: 576px) {
+
+            .clients-carousel-wrapper {
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(10px);
+                border-radius: 0;
+                padding: 60px 0;
+                margin: 40px 0;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+                border: none;
+                margin-left: calc(-50vw + 50%);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .about .section-title {
+                font-size: 1rem;
+            }
+
+            .about .cta-button {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .about .chart-overlay {
+                bottom: 1rem;
+                left: 1rem;
+                right: 1rem;
+                padding: 1rem;
+            }
+        }
 
     </style>
 </head>
@@ -723,62 +1056,53 @@
     <!-- Carousel End -->
     </div>
     <!-- Navbar & Hero End -->
-    <!-- About Start -->
     <div class="container-fluid about py-5" id="about">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div>
-                        <h4 class="text-primary">About Dolphin's IT Services</h4>
-                        <h1 class="display-5 mb-4">Your Trusted Partner in Digital Transformation</h1>
-                        <p class="mb-4">
+                <div class="col-xl-7">
+                    <div class="animate-on-scroll">
+                        <h4 class="section-title">About Dolphin's IT Services</h4>
+                        <h1 class="display-5">Your Trusted Partner in Digital Transformation</h1>
+                        <p class="lead-text">
                             At Dolphin's IT Services, we specialize in developing custom software solutions that streamline operations and enhance productivity. With years of experience in educational technology and management systems, we've helped numerous institutions and organizations achieve their digital goals.
                         </p>
-                        <div class="row g-4">
-                            <div class="col-md-6 col-lg-6 col-xl-6">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-code fa-3x text-primary"></i></div>
-                                    <div class="ms-4">
-                                        <h4>Custom Development</h4>
-                                        <p>Tailored software solutions designed specifically for your business needs and requirements.</p>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6 animate-on-scroll animate-delay-1">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-code"></i>
                                     </div>
+                                    <h4 class="feature-title">Custom Development</h4>
+                                    <p class="feature-text">Tailored software solutions designed specifically for your business needs and requirements.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-6 col-xl-6">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-graduation-cap fa-3x text-primary"></i></div>
-                                    <div class="ms-4">
-                                        <h4>Education Technology</h4>
-                                        <p>Specialized in educational software including school management and student information systems.</p>
+                            <div class="col-md-6 animate-on-scroll animate-delay-2">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-graduation-cap"></i>
                                     </div>
+                                    <h4 class="feature-title">Education Technology</h4>
+                                    <p class="feature-text">Specialized in educational software including school management and student information systems.</p>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <a href="#" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Our Services</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex">
-                                    <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
-                                    <div>
-                                        <h4>Call Us</h4>
-                                        <p class="mb-0 fs-5" style="letter-spacing: 1px;">+63 XXX XXX XXXX</p>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
+
+                        <div class="animate-on-scroll animate-delay-3">
+                            <a href="#services" class="cta-button">
+                                <i class="fas fa-arrow-right me-2"></i>
+                                Explore Our Services
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="bg-primary rounded position-relative overflow-hidden">
-                        <img src="public/img/about-2.png" class="img-fluid rounded w-100" alt="Software Development Team">
-                        <div class="" style="position: absolute; top: -15px; right: -15px;">
-                            <img src="public/img/about-3.png" class="img-fluid" style="width: 150px; height: 150px; opacity: 0.7;" alt="">
-                        </div>
-                        <div class="" style="position: absolute; top: -20px; left: 10px; transform: rotate(90deg);">
-                            <img src="public/img/about-4.png" class="img-fluid" style="width: 100px; height: 150px; opacity: 0.9;" alt="">
-                        </div>
-                        <div class="rounded-bottom">
-                            <img src="public/img/about-5.jpg" class="img-fluid rounded-bottom w-100" alt="Technology Solutions">
+
+                <div class="col-xl-5">
+                    <div class="org-chart-container animate-on-scroll animate-delay-2">
+                        <img src="public/assets/OrgChart1.png" class="org-chart-img" alt="Dolphin's IT Services Organizational Chart">
+                        <div class="chart-overlay">
+                            <h5><i class="fas fa-sitemap me-2"></i>Our Team Structure</h5>
+                            <p>Discover how our organized team structure enables us to deliver exceptional results for every project.</p>
                         </div>
                     </div>
                 </div>
@@ -790,7 +1114,7 @@
     <div class="container-fluid service pb-5" id="services">
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary">Our Software Solutions</h4>
+                <h4 class="text-primary" style="margin-top:20px !important;">Our Software Solutions</h4>
                 <h1 class="display-5 mb-4">Comprehensive IT Services & Custom Software Development</h1>
                 <p class="mb-0">
                     We provide end-to-end software development services, from initial consultation and system design to implementation, training, and ongoing support. Our solutions are built to scale with your organization's growth.
@@ -961,6 +1285,7 @@
             </div>
 
             <!-- Animated Logo Carousel with Decorative Borders -->
+
             <div class="clients-carousel-wrapper simple-static-borders overflow-hidden position-relative">
                 <!-- Decorative Corner Elements -->
                 <div class="corner-decoration top-left"></div>
@@ -1035,7 +1360,7 @@
     <div class="container-fluid offer-section pb-5" id="portfolio">
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary">Success Stories</h4>
+                <h4 class="text-primary" style="margin-top:20px !important;">Success Stories</h4>
                 <h1 class="display-5 mb-4">Our Client Implementations</h1>
                 <p class="mb-0">
                     Discover how we've helped our partners achieve their digital transformation goals with custom software solutions.
@@ -1643,6 +1968,34 @@
 
     <!-- Event Slider JavaScript -->
     <script>
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.about .animate-on-scroll');
+
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                observer.observe(el);
+            });
+        });
+
+
         function openEventSlider() {
             const slider = document.getElementById('eventSlider');
             const overlay = document.getElementById('sliderOverlay');

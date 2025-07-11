@@ -72,7 +72,8 @@
 }
 
 .btn.btn-primary:hover {
-    background: var(--bs-dark);
+    background: var(--bs-white) !important;
+    border: solid 2px !important;
     color: var(--bs-primary);
 }
 

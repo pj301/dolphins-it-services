@@ -109,6 +109,8 @@
     <Content Include="public\assets\idpreview.png" />
     <Content Include="public\assets\idprint.png" />
     <Content Include="public\assets\idstudent.png" />
+    <Content Include="public\assets\OrgChart.png" />
+    <Content Include="public\assets\OrgChart1.png" />
     <Content Include="public\assets\qr.png" />
     <Content Include="public\assets\ringlanding.png" />
     <Content Include="public\assets\ringorg.png" />
@@ -430,6 +432,8 @@
     <Content Include="public\scss\bootstrap\scss\_utilities.scss" />
     <Content Include="public\scss\bootstrap\scss\_variables.scss" />
     <Content Include="school-id-system.html" />
+    <Content Include="school.html" />
+    <Content Include="waterworks.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
